@@ -25,3 +25,19 @@ A running journal of work sessions on The Illumination Space. Each entry: date, 
 **Task:** Document the five-step loop the agent runs on, with a worked example (reminding a student, Ayesha, about pending assignments).
 
 **Lesson:** "Improve" only means something if it changes the next action — the Ayesha example makes this concrete: resending the same email after it failed isn't improving, it's repeating. The real lesson from a failed action is diagnosing *why* it failed (wrong channel, not enough urgency) before picking the next one, which is exactly the behavior CLAUDE.md's "How we work" section requires when a worksheet stage fails (bad topic match, wrong skill level, stale fact).
+
+---
+
+## 2026-07-06 — Reorganize repo into notes/instructions/data/decisions structure, then bd init
+
+**Task:** Move flat top-level files into `notes/`, `instructions/`, `data/`, `decisions/`, write `structure.md` to map them, and initialize the Beads issue tracker in the same session.
+
+**Lesson:** Writing structure.md as a one-time snapshot means it silently goes stale the moment new folders show up afterward — `.beads`, `.claude`, `.agents` all landed post-reorganization and none made it into the map. A folder map is only trustworthy if it's re-checked whenever a new top-level folder appears, the same way memory.md gets a new entry every session rather than being written once and left alone.
+
+---
+
+## 2026-07-08 — Add decision log, then trim entries to one sentence each
+
+**Task:** Write `decision.md` capturing 3 key product decisions from planning.md (topic input gating, template+LLM hybrid, split grading authority), then immediately condense each Decided/Why/Ruled-out field down to one sentence.
+
+**Lesson:** The first draft of each entry carried the full reasoning chain (specific examples, edge cases, second-order justifications) and was harder to scan *because* it was complete — trimming to one sentence per field didn't lose the decision, it forced picking out which single clause was load-bearing (e.g., "breaks the requirement that every factual claim trace back to a sourced fact") versus which was supporting detail. A decision log is for fast lookup later, not for re-deriving the reasoning from scratch each time it's read.
