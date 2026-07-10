@@ -15,9 +15,12 @@
 ## Tooling / agent config (dotfiles)
 
 - `.beads/` → Beads issue tracker database (`bd`)
-- `.claude/` → Claude Code settings (`settings.json`, `settings.local.json`)
+- `.claude/` → Claude Code settings (`settings.json`, `settings.local.json`) and
+  project subagents (`agents/structure-sync.md`, `agents/decision-logger.md`,
+  `agents/memory-journalist.md`)
 - `.codex/` → Codex config (`config.toml`, `hooks.json`)
-- `.agents/` → shared agent skills (e.g. `skills/beads/`)
+- `.agents/` → shared agent skills: `skills/beads/`, plus project-context
+  skills `skills/illumination-space-overview/` and `skills/illumination-space-docs/`
 
 ## Top-level files
 

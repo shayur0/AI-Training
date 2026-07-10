@@ -41,3 +41,11 @@ A running journal of work sessions on The Illumination Space. Each entry: date, 
 **Task:** Write `decision.md` capturing 3 key product decisions from planning.md (topic input gating, template+LLM hybrid, split grading authority), then immediately condense each Decided/Why/Ruled-out field down to one sentence.
 
 **Lesson:** The first draft of each entry carried the full reasoning chain (specific examples, edge cases, second-order justifications) and was harder to scan *because* it was complete — trimming to one sentence per field didn't lose the decision, it forced picking out which single clause was load-bearing (e.g., "breaks the requirement that every factual claim trace back to a sourced fact") versus which was supporting detail. A decision log is for fast lookup later, not for re-deriving the reasoning from scratch each time it's read.
+
+---
+
+## 2026-07-10 — Add SKILL.md files and Claude Code subagents for onboarding
+
+**Task:** Wrote two project-context skills (`illumination-space-overview`, `illumination-space-docs`) under `.agents/skills/`, and three Claude Code subagents (`structure-sync`, `decision-logger`, `memory-journalist`) under `.claude/agents/`, then updated `structure.md` in the same session to keep it accurate.
+
+**Lesson:** The most useful agents to build weren't invented from scratch — they came directly out of this file's own past entries (structure.md drift on 2026-07-06, decision-log trimming on 2026-07-08). A memory log that records *why* something broke is a ready-made spec for the agent that should prevent it next time; the harder part than writing the agent was resisting the urge to give it broader scope than the one narrow failure mode it was built for.
