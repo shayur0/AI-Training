@@ -44,8 +44,11 @@ export default function Worksheet({ subject, onComplete }) {
 
       {question.type === "numeric" && (
         <input
+          id="numeric-answer"
+          name="numeric-answer"
           className="numeric-input"
           type="number"
+          step="any"
           inputMode="decimal"
           value={currentValue}
           onChange={(e) => setCurrentValue(e.target.value)}
