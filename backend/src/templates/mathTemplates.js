@@ -17,7 +17,7 @@ export function averageGoalsQuestion(team) {
     tolerance: 0.1,
     answer: average,
     sourceFact: `${team.team}: ${team.goals} goals in ${team.games} games`,
-    explanation: `Average goals per game = total goals ÷ games played = ${team.goals} ÷ ${team.games} = ${average}.`,
+    explanation: `Average goals per game = total goals ÷ games played = ${team.goals} ÷ ${team.games} ≈ ${average}.`,
   };
 }
 
@@ -33,7 +33,7 @@ export function winPercentageQuestion(team) {
     tolerance: 0.5,
     answer: percentage,
     sourceFact: `${team.team}: ${team.wins} wins out of ${team.games} games`,
-    explanation: `Win % = wins ÷ games played × 100 = ${team.wins} ÷ ${team.games} × 100 = ${percentage}%.`,
+    explanation: `Win % = wins ÷ games played × 100 = ${team.wins} ÷ ${team.games} × 100 ≈ ${percentage}%.`,
   };
 }
 
