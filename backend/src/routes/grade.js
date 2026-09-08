@@ -4,6 +4,7 @@ import { generateWorksheet } from "../worksheetGenerator.js";
 const router = Router();
 
 const VALID_SUBJECTS = new Set(["math", "geography"]);
+const DEFAULT_TOPIC = "world-cup-2026"; // keeps older clients that don't send `topic` working
 
 function isCorrect(question, submittedValue) {
   if (question.type === "numeric") {
@@ -20,7 +21,7 @@ function isCorrect(question, submittedValue) {
 // decisions/decision.md #3 — Phase 1 only has closed-form question types, so
 // there is no open-ended-writing branch yet.
 router.post("/", (req, res) => {
-  const { subject, answers } = req.body ?? {};
+  const { subject, answers, topic: topicId = DEFAULT_TOPIC } = req.body ?? {};
 
   if (!VALID_SUBJECTS.has(subject)) {
     return res.status(400).json({ error: `subject must be one of: ${[...VALID_SUBJECTS].join(", ")}` });
@@ -29,7 +30,7 @@ router.post("/", (req, res) => {
     return res.status(400).json({ error: "answers must be an array of { id, value }" });
   }
 
-  const questions = generateWorksheet(subject);
+  const questions = generateWorksheet(topicId, subject);
   const byId = new Map(questions.map((q) => [q.id, q]));
 
   const results = answers.map(({ id, value }) => {

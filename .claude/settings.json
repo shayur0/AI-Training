@@ -10,6 +10,17 @@
         ],
         "matcher": ""
       }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "bash .claude/hooks/enqueue-topic-request.sh",
+            "type": "command"
+          }
+        ],
+        "matcher": "Write"
+      }
     ]
   }
 }

@@ -1,24 +1,22 @@
 import { Router } from "express";
+import { listTopics } from "../topics/index.js";
 
-// Stage 1 / decisions/decision.md #1: curated-only for the child; the only
-// topic in Phase 1 is the World Cup demo topic. Free-text search behind a
-// parent "grown-up mode" is out of scope for Phase 1.
+// Stage 1 / decisions/decision.md #1: curated-only for the child — topics come
+// from the registry (agents-plan.md), not free text. Free-text search behind a
+// parent "grown-up mode" is still out of scope.
 const router = Router();
 
+const SUBJECT_META = {
+  math: { id: "math", label: "Math", icon: "🔢" },
+  geography: { id: "geography", label: "Geography", icon: "🌍" },
+};
+
 router.get("/", (_req, res) => {
-  res.json({
-    topics: [
-      {
-        id: "world-cup-2026",
-        label: "FIFA World Cup",
-        icon: "⚽",
-        subjects: [
-          { id: "math", label: "Math", icon: "🔢" },
-          { id: "geography", label: "Geography", icon: "🌍" },
-        ],
-      },
-    ],
-  });
+  const topics = listTopics().map((topic) => ({
+    ...topic,
+    subjects: topic.subjects.map((s) => SUBJECT_META[s]),
+  }));
+  res.json({ topics });
 });
 
 export default router;

@@ -6,7 +6,7 @@ function shuffledOptions(correct, pool, count = 3) {
   return [correct, ...picked].sort(() => Math.random() - 0.5);
 }
 
-export function continentQuestion(country, allCountries) {
+export function continentQuestion(country, allCountries, topicLabel) {
   const options = shuffledOptions(
     country.continent,
     [...new Set(allCountries.map((c) => c.continent))]
@@ -16,7 +16,7 @@ export function continentQuestion(country, allCountries) {
     subject: "geography",
     skill: "continents",
     difficulty: "warm-up",
-    prompt: `${country.name} is competing in the World Cup. Which continent is it on?`,
+    prompt: `${country.name} is one of the countries you're learning about today (${topicLabel}). Which continent is it on?`,
     type: "multiple-choice",
     options,
     answer: country.continent,

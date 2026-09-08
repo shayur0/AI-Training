@@ -9,6 +9,9 @@
 node_modules/
 dist/
 
+# OS noise
+.DS_Store
+
 # Secrets — never commit real connection strings/keys
 .env
 .env.local

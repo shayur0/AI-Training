@@ -18,18 +18,18 @@ export function fetchTopics() {
   return request("/topics");
 }
 
-export function fetchWorksheet(subject) {
+export function fetchWorksheet(topic, subject) {
   return request("/worksheet", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ subject }),
+    body: JSON.stringify({ topic, subject }),
   });
 }
 
-export function submitGrade(subject, answers) {
+export function submitGrade(topic, subject, answers) {
   return request("/grade", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ subject, answers }),
+    body: JSON.stringify({ topic, subject, answers }),
   });
 }

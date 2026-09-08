@@ -3,7 +3,7 @@ import { fetchTopics } from "../api";
 
 // Stage 1 / Stage 6: curated icon cards only for the child — no free-text
 // topic search in Phase 1 (decisions/decision.md #1).
-export default function TopicSelect({ onSubjectPicked }) {
+export default function TopicSelect({ onTopicAndSubjectPicked }) {
   const [topics, setTopics] = useState([]);
   const [error, setError] = useState(null);
 
@@ -31,7 +31,7 @@ export default function TopicSelect({ onSubjectPicked }) {
               <button
                 key={subject.id}
                 className="subject-button"
-                onClick={() => onSubjectPicked(subject.id)}
+                onClick={() => onTopicAndSubjectPicked(topic.id, subject.id)}
               >
                 <span className="icon">{subject.icon}</span>
                 {subject.label}

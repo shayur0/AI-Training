@@ -1,0 +1,25 @@
+{
+  "topic": "Summer Olympics",
+  "topic_type": "recurring_event",
+  "data_freshness": "sample",
+  "as_of": "representative recent-Games-style sample (illustrative only, not tied to any single specific Olympic Games or date)",
+  "source": "illustrative_sample (general knowledge, not a live licensed feed)",
+
+  "teamStats": [
+    { "team": "USA", "goals": 100, "games": 300, "wins": 40, "draws": 27, "losses": 33 },
+    { "team": "China", "goals": 88, "games": 250, "wins": 38, "draws": 32, "losses": 18 },
+    { "team": "Japan", "goals": 58, "games": 200, "wins": 27, "draws": 14, "losses": 17 },
+    { "team": "Great Britain", "goals": 65, "games": 220, "wins": 22, "draws": 21, "losses": 22 },
+    { "team": "France", "goals": 64, "games": 220, "wins": 16, "draws": 26, "losses": 22 },
+    { "team": "Australia", "goals": 53, "games": 200, "wins": 18, "draws": 19, "losses": 16 }
+  ],
+
+  "countries": [
+    { "name": "USA", "continent": "North America", "capital": "Washington, D.C.", "language": "English" },
+    { "name": "China", "continent": "Asia", "capital": "Beijing", "language": "Mandarin Chinese" },
+    { "name": "Japan", "continent": "Asia", "capital": "Tokyo", "language": "Japanese" },
+    { "name": "Great Britain", "continent": "Europe", "capital": "London", "language": "English" },
+    { "name": "France", "continent": "Europe", "capital": "Paris", "language": "French" },
+    { "name": "Australia", "continent": "Oceania", "capital": "Canberra", "language": "English" }
+  ]
+}

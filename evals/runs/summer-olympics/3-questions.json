@@ -1,0 +1,86 @@
+[
+  {
+    "id": "math-avg-USA",
+    "subject": "math",
+    "skill": "averages",
+    "difficulty": "warm-up",
+    "prompt": "USA scored 100 goals in 300 games. What is their average goals per game?",
+    "type": "numeric",
+    "tolerance": 0.1,
+    "answer": 0.3,
+    "sourceFact": "USA: 100 goals in 300 games",
+    "explanation": "Average goals per game = total goals ÷ games played = 100 ÷ 300 ≈ 0.3."
+  },
+  {
+    "id": "math-avg-China",
+    "subject": "math",
+    "skill": "averages",
+    "difficulty": "warm-up",
+    "prompt": "China scored 88 goals in 250 games. What is their average goals per game?",
+    "type": "numeric",
+    "tolerance": 0.1,
+    "answer": 0.4,
+    "sourceFact": "China: 88 goals in 250 games",
+    "explanation": "Average goals per game = total goals ÷ games played = 88 ÷ 250 ≈ 0.4."
+  },
+  {
+    "id": "math-diff-Japan-Australia",
+    "subject": "math",
+    "skill": "subtraction",
+    "difficulty": "warm-up",
+    "prompt": "Japan scored 58 goals total. Australia scored 53 goals total. How many more goals did Japan score than Australia?",
+    "type": "numeric",
+    "tolerance": 0,
+    "answer": 5,
+    "sourceFact": "Japan: 58 goals; Australia: 53 goals",
+    "explanation": "Japan − Australia = 58 − 53 = 5."
+  },
+  {
+    "id": "geo-continent-Japan",
+    "subject": "geography",
+    "skill": "continents",
+    "difficulty": "warm-up",
+    "prompt": "Japan is one of the countries you're learning about today (Summer Olympics). Which continent is it on?",
+    "type": "multiple-choice",
+    "options": [
+      "Europe",
+      "Oceania",
+      "Asia"
+    ],
+    "answer": "Asia",
+    "sourceFact": "Japan is in Asia",
+    "explanation": "Japan is located in Asia."
+  },
+  {
+    "id": "geo-capital-France",
+    "subject": "geography",
+    "skill": "capitals",
+    "difficulty": "challenge",
+    "prompt": "What is the capital city of France?",
+    "type": "multiple-choice",
+    "options": [
+      "Canberra",
+      "Tokyo",
+      "Paris"
+    ],
+    "answer": "Paris",
+    "sourceFact": "France's capital is Paris",
+    "explanation": "France's capital is Paris."
+  },
+  {
+    "id": "geo-language-Australia",
+    "subject": "geography",
+    "skill": "languages",
+    "difficulty": "warm-up",
+    "prompt": "What language do people mostly speak in Australia?",
+    "type": "multiple-choice",
+    "options": [
+      "Mandarin Chinese",
+      "English",
+      "Japanese"
+    ],
+    "answer": "English",
+    "sourceFact": "Australia's main language is English",
+    "explanation": "People in Australia mostly speak English."
+  }
+]

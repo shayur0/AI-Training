@@ -4,7 +4,7 @@ import { fetchWorksheet } from "../api";
 // Stage 6: one question per screen, input matched to question type
 // (number pad for numeric, tap-to-select for multiple-choice) — no open
 // free-text interface exposed to the child.
-export default function Worksheet({ subject, onComplete }) {
+export default function Worksheet({ topic, subject, onComplete }) {
   const [questions, setQuestions] = useState(null);
   const [error, setError] = useState(null);
   const [index, setIndex] = useState(0);
@@ -12,10 +12,10 @@ export default function Worksheet({ subject, onComplete }) {
   const [currentValue, setCurrentValue] = useState("");
 
   useEffect(() => {
-    fetchWorksheet(subject)
+    fetchWorksheet(topic, subject)
       .then((data) => setQuestions(data.questions))
       .catch((err) => setError(err.message));
-  }, [subject]);
+  }, [topic, subject]);
 
   if (error) return <p className="error">Couldn't load the worksheet: {error}</p>;
   if (!questions) return <p className="loading">Loading your worksheet...</p>;
