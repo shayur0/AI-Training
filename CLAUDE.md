@@ -60,18 +60,25 @@ This protocol applies when ending a Beads implementation workflow. It is subordi
 
 ## Build & Test
 
-_Add your build and test commands here_
-
 ```bash
-# Example:
-# npm install
-# npm test
+cd backend && npm install && npm run dev    # Express API, port 3001
+cd frontend && npm install && npm run dev   # Vite dev server, proxies /api
+node evals/run-all.mjs evals/runs/<slug> "<Topic Label>"  # orchestrator evals
 ```
 
 ## Architecture Overview
 
-_Add a brief overview of your project architecture_
+**The Illumination Space** turns a real-world topic into a personalized worksheet
+for kids ages 5–12, then grades it and gives feedback. Audience: children,
+directly or via a parent/teacher. Full 9-stage pipeline: `instructions/planning.md`.
+Hard safety/traceability rules (never break): `instructions/CLAUDE.md`. Agent
+operating loop: `instructions/agent_loop.md`. The topic-adding orchestrator
+(sub-agents + their guardrails): `agents-plan.md` + `.claude/skills/`.
 
 ## Conventions & Patterns
 
-_Add your project-specific conventions here_
+- Template + sourced-fact hybrid for questions — never invent a number
+  (`decisions/decision.md`).
+- Adding a topic is additive only: one new `backend/src/data/*.js` file + one
+  `backend/src/topics/index.js` entry — never touch `grade.js` or another topic.
+- Write learner-facing text for a 5–12-year-old: short sentences, no jargon.
