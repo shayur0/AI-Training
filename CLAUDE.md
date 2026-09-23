@@ -58,27 +58,38 @@ This protocol applies when ending a Beads implementation workflow. It is subordi
 <!-- END BEADS INTEGRATION -->
 
 
-## Build & Test
+## What this is
+
+**The Illumination Space** turns a real-world topic into a personalized worksheet
+for kids ages 5–12, then grades it and gives feedback. Audience: children,
+directly or via a parent/teacher.
+
+## Critical rules (never break)
+
+- Never expose a child to unsafe/unverified content; every fact in a worksheet
+  must trace to a source — never invent one. Full list: `instructions/CLAUDE.md`.
+- Adding a topic is additive only — never touch `grade.js` or another topic's
+  data file. Full pattern: `agents-plan.md`.
+- This file stays a router. If you're about to add a paragraph of detail,
+  it belongs in an L2/L3 doc below, not here — keep it under 150 lines.
+
+## Router — where to go next
+
+| Need | Read (L2/L3) |
+|---|---|
+| Product safety/traceability rules, full list | `instructions/CLAUDE.md` |
+| Full 9-stage architecture | `instructions/planning.md` |
+| Agent operating loop (Observe→Decide→Act→Feedback→Improve) | `instructions/agent_loop.md` |
+| Topic-adding orchestrator + sub-agent guardrails | `agents-plan.md` + `.claude/skills/` |
+| Past product decisions + why | `decisions/decision.md` |
+| Session history / lessons learned | `notes/memory.md` |
+| Orchestrator run history / bugs an eval caught | `evals/runs/RUN-LOG.md` |
+| This harness's own memory (open work, architectural calls, incidents) | `harness/status.jsonl` · `harness/decisions.jsonl` · `harness/failures.jsonl` |
+
+## Build & run
 
 ```bash
 cd backend && npm install && npm run dev    # Express API, port 3001
 cd frontend && npm install && npm run dev   # Vite dev server, proxies /api
 node evals/run-all.mjs evals/runs/<slug> "<Topic Label>"  # orchestrator evals
 ```
-
-## Architecture Overview
-
-**The Illumination Space** turns a real-world topic into a personalized worksheet
-for kids ages 5–12, then grades it and gives feedback. Audience: children,
-directly or via a parent/teacher. Full 9-stage pipeline: `instructions/planning.md`.
-Hard safety/traceability rules (never break): `instructions/CLAUDE.md`. Agent
-operating loop: `instructions/agent_loop.md`. The topic-adding orchestrator
-(sub-agents + their guardrails): `agents-plan.md` + `.claude/skills/`.
-
-## Conventions & Patterns
-
-- Template + sourced-fact hybrid for questions — never invent a number
-  (`decisions/decision.md`).
-- Adding a topic is additive only: one new `backend/src/data/*.js` file + one
-  `backend/src/topics/index.js` entry — never touch `grade.js` or another topic.
-- Write learner-facing text for a 5–12-year-old: short sentences, no jargon.

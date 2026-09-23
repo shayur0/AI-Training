@@ -1,3 +1,9 @@
+---
+type: L3
+last_verified: 2026-09-23
+owner: shayur0
+---
+
 # Memory
 
 A running journal of work sessions on The Illumination Space. Each entry: date, task, one true lesson learned.

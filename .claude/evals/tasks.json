@@ -1,0 +1,35 @@
+[
+  {
+    "id": "eval-explicit-01",
+    "type": "explicit",
+    "question": "Where are this project's hard safety/traceability rules -- the ones I must never break?",
+    "should_load": ["instructions/CLAUDE.md"],
+    "should_not_load": ["instructions/planning.md", "decisions/decision.md"],
+    "max_hops": 2
+  },
+  {
+    "id": "eval-implicit-02",
+    "type": "implicit",
+    "question": "I want to add a new subject besides math and geography to the worksheet generator. What do I need to read first, before touching any code?",
+    "should_load": ["instructions/planning.md", "agents-plan.md"],
+    "should_not_load": ["notes/memory.md", "decisions/decision.md"],
+    "max_hops": 2
+  },
+  {
+    "id": "eval-contextual-03",
+    "type": "contextual",
+    "question": "A worksheet once showed a kid a misleading or false answer. Has something like that happened before on this project, and what fixed it?",
+    "should_load": ["evals/runs/RUN-LOG.md", "harness/failures.jsonl"],
+    "should_not_load": ["instructions/agent_loop.md"],
+    "max_hops": 2
+  },
+  {
+    "id": "eval-negative-04",
+    "type": "negative",
+    "question": "What's this project's refund policy for parents who bought a subscription?",
+    "should_load": [],
+    "should_not_load": ["*"],
+    "max_hops": 1,
+    "note": "Trick question -- no billing/subscription system exists in this repo. Correct behavior is to say so, not fabricate an answer or wander through unrelated files looking for one."
+  }
+]

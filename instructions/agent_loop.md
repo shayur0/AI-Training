@@ -1,3 +1,9 @@
+---
+type: L3
+last_verified: 2026-09-23
+owner: shayur0
+---
+
 # The Agent Loop
 
 An AI agent doesn't just do one thing and stop. It runs in a loop, constantly

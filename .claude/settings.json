@@ -28,9 +28,37 @@
           {
             "command": "bd prime --hook-json",
             "type": "command"
+          },
+          {
+            "command": "node .claude/hooks/reinject-harness-status.js",
+            "type": "command"
           }
         ],
         "matcher": ""
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "node .claude/hooks/block-env-commit.js",
+            "type": "command"
+          },
+          {
+            "command": "node .claude/hooks/block-force-push-main.js",
+            "type": "command"
+          }
+        ],
+        "matcher": "Bash"
+      },
+      {
+        "hooks": [
+          {
+            "command": "node .claude/hooks/block-oversized-claude-md.js",
+            "type": "command"
+          }
+        ],
+        "matcher": "Edit|Write"
       }
     ],
     "PostToolUse": [
@@ -42,6 +70,17 @@
           }
         ],
         "matcher": "Write"
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "command": "node .claude/hooks/session-end-check.js",
+            "type": "command"
+          }
+        ],
+        "matcher": ""
       }
     ]
   }

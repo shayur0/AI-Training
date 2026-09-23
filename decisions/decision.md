@@ -1,3 +1,9 @@
+---
+type: L3
+last_verified: 2026-09-23
+owner: shayur0
+---
+
 # Decisions
 
 A log of real decisions made on The Illumination Space. Each entry: what we decided, why, and what we ruled out.
