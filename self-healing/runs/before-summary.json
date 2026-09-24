@@ -1,0 +1,72 @@
+{
+  "label": "before",
+  "n": 10,
+  "runs": [
+    {
+      "run": 1,
+      "tries": 1,
+      "escalated": false,
+      "ok": true
+    },
+    {
+      "run": 2,
+      "tries": 1,
+      "escalated": false,
+      "ok": true
+    },
+    {
+      "run": 3,
+      "tries": 1,
+      "escalated": false,
+      "ok": true
+    },
+    {
+      "run": 4,
+      "tries": 2,
+      "escalated": false,
+      "ok": true
+    },
+    {
+      "run": 5,
+      "tries": 1,
+      "escalated": false,
+      "ok": true
+    },
+    {
+      "run": 6,
+      "tries": 1,
+      "escalated": false,
+      "ok": true
+    },
+    {
+      "run": 7,
+      "tries": 1,
+      "escalated": false,
+      "ok": true
+    },
+    {
+      "run": 8,
+      "tries": 1,
+      "escalated": false,
+      "ok": true
+    },
+    {
+      "run": 9,
+      "tries": 1,
+      "escalated": false,
+      "ok": true
+    },
+    {
+      "run": 10,
+      "tries": 1,
+      "escalated": false,
+      "ok": true
+    }
+  ],
+  "totals": {
+    "totalTries": 11,
+    "retries": 1,
+    "escalations": 0,
+    "avgTries": 1.1
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "ok": true,
+  "escalated": false,
+  "tries": 1,
+  "trail": [
+    {
+      "attempt": 1,
+      "questions": [
+        {
+          "id": "math-1",
+          "subject": "math",
+          "skill": "subtraction",
+          "difficulty": "warm-up",
+          "prompt": "At the Summer Olympics, USA scored 100 goals and Japan scored 58 goals. How many more goals did USA score than Japan?",
+          "type": "numeric",
+          "answer": 42,
+          "tolerance": 0,
+          "sourceFact": "teamStats: USA goals=100, Japan goals=58",
+          "explanation": "Subtract Japan's goals from USA's goals: 100 − 58 = 42."
+        },
+        {
+          "id": "math-2",
+          "subject": "math",
+          "skill": "average",
+          "difficulty": "challenge",
+          "prompt": "USA scored 100 goals, China scored 88 goals, and Japan scored 58 goals. What is the average number of goals scored by these three teams?",
+          "type": "numeric",
+          "answer": 82,
+          "tolerance": 0,
+          "sourceFact": "teamStats: USA goals=100, China goals=88, Japan goals=58",
+          "explanation": "Add all three totals: 100 + 88 + 58 = 246. Then divide by 3: 246 ÷ 3 = 82."
+        },
+        {
+          "id": "math-3",
+          "subject": "math",
+          "skill": "percentage",
+          "difficulty": "challenge",
+          "prompt": "France had 16 wins, 26 draws, and 22 losses — 64 results in total. What percentage of France's results were wins?",
+          "type": "numeric",
+          "answer": 25,
+          "tolerance": 0,
+          "sourceFact": "teamStats: France wins=16, draws=26, losses=22 (wins+draws+losses=64)",
+          "explanation": "Divide wins by total results, then multiply by 100: 16 ÷ 64 = 0.25, and 0.25 × 100 = 25%."
+        },
+        {
+          "id": "geo-1",
+          "subject": "geography",
+          "skill": "capital cities",
+          "difficulty": "warm-up",
+          "prompt": "What is the capital city of Australia?",
+          "type": "multiple-choice",
+          "answer": "Canberra",
+          "options": [
+            "Sydney",
+            "Melbourne",
+            "Canberra",
+            "Brisbane"
+          ],
+          "sourceFact": "countries: Australia capital=Canberra",
+          "explanation": "Australia's capital is Canberra, not Sydney. Canberra was purpose-built to be the capital city."
+        },
+        {
+          "id": "geo-2",
+          "subject": "geography",
+          "skill": "continents",
+          "difficulty": "warm-up",
+          "prompt": "Which continent is Australia part of?",
+          "type": "multiple-choice",
+          "answer": "Oceania",
+          "options": [
+            "Asia",
+            "Africa",
+            "Europe",
+            "Oceania"
+          ],
+          "sourceFact": "countries: Australia continent=Oceania",
+          "explanation": "Australia is in Oceania, a region that includes Australia, New Zealand, and many Pacific islands."
+        },
+        {
+          "id": "geo-3",
+          "subject": "geography",
+          "skill": "languages",
+          "difficulty": "challenge",
+          "prompt": "Which of these Summer Olympics countries speaks Mandarin Chinese as its main language?",
+          "type": "multiple-choice",
+          "answer": "China",
+          "options": [
+            "Japan",
+            "France",
+            "China",
+            "Great Britain"
+          ],
+          "sourceFact": "countries: China language=Mandarin Chinese",
+          "explanation": "China's main language is Mandarin Chinese. Japan speaks Japanese, France speaks French, and Great Britain speaks English."
+        }
+      ],
+      "check": {
+        "ok": true
+      }
+    }
+  ]
+}

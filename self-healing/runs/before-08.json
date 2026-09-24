@@ -1,0 +1,102 @@
+{
+  "ok": true,
+  "escalated": false,
+  "tries": 1,
+  "trail": [
+    {
+      "attempt": 1,
+      "questions": [
+        {
+          "id": "q1",
+          "subject": "math",
+          "skill": "subtraction",
+          "difficulty": "warm-up",
+          "prompt": "USA scored 100 goals and Australia scored 53 goals. How many more goals did USA score than Australia?",
+          "type": "numeric",
+          "answer": 47,
+          "tolerance": 0,
+          "sourceFact": "teamStats: USA goals=100, Australia goals=53",
+          "explanation": "Subtract Australia's goals from USA's goals: 100 − 53 = 47."
+        },
+        {
+          "id": "q2",
+          "subject": "math",
+          "skill": "addition",
+          "difficulty": "warm-up",
+          "prompt": "Great Britain had 22 wins and France had 16 wins. How many wins did they have altogether?",
+          "type": "numeric",
+          "answer": 38,
+          "tolerance": 0,
+          "sourceFact": "teamStats: Great Britain wins=22, France wins=16",
+          "explanation": "Add the two teams' wins together: 22 + 16 = 38."
+        },
+        {
+          "id": "q3",
+          "subject": "math",
+          "skill": "percentage",
+          "difficulty": "challenge",
+          "prompt": "USA had 40 wins, 27 draws, and 33 losses. What percentage of their results were wins?",
+          "type": "numeric",
+          "answer": 40,
+          "tolerance": 0,
+          "sourceFact": "teamStats: USA wins=40, draws=27, losses=33",
+          "explanation": "First add all results: 40 + 27 + 33 = 100. Then divide wins by the total and multiply by 100: 40 ÷ 100 × 100 = 40%."
+        },
+        {
+          "id": "q4",
+          "subject": "geography",
+          "skill": "continent identification",
+          "difficulty": "warm-up",
+          "prompt": "Which continent is Japan in?",
+          "type": "multiple-choice",
+          "answer": "Asia",
+          "options": [
+            "Asia",
+            "Europe",
+            "Oceania",
+            "North America"
+          ],
+          "sourceFact": "countries: Japan continent=Asia",
+          "explanation": "Japan is a group of islands located in the continent of Asia."
+        },
+        {
+          "id": "q5",
+          "subject": "geography",
+          "skill": "capital identification",
+          "difficulty": "warm-up",
+          "prompt": "What is the capital city of France?",
+          "type": "multiple-choice",
+          "answer": "Paris",
+          "options": [
+            "London",
+            "Paris",
+            "Beijing",
+            "Canberra"
+          ],
+          "sourceFact": "countries: France capital=Paris",
+          "explanation": "The capital city of France is Paris. It sits on the River Seine and is home to the Eiffel Tower!"
+        },
+        {
+          "id": "q6",
+          "subject": "geography",
+          "skill": "capital identification",
+          "difficulty": "challenge",
+          "prompt": "What is the capital city of Australia? Hint: it is not the biggest city!",
+          "type": "multiple-choice",
+          "answer": "Canberra",
+          "options": [
+            "Sydney",
+            "Melbourne",
+            "Canberra",
+            "Brisbane"
+          ],
+          "sourceFact": "countries: Australia capital=Canberra",
+          "explanation": "Many people guess Sydney, but Australia's capital is actually Canberra. Canberra was chosen as a special in-between city because Sydney and Melbourne could not agree on which one should be the capital."
+        }
+      ],
+      "check": {
+        "ok": true
+      }
+    }
+  ]
+}

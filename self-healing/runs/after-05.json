@@ -1,0 +1,102 @@
+{
+  "ok": true,
+  "escalated": false,
+  "tries": 1,
+  "trail": [
+    {
+      "attempt": 1,
+      "questions": [
+        {
+          "id": "q1",
+          "subject": "math",
+          "skill": "subtraction",
+          "difficulty": "warm-up",
+          "prompt": "The USA scored 100 goals and Australia scored 53 goals. How many more goals did the USA score than Australia?",
+          "type": "numeric",
+          "answer": 47,
+          "tolerance": 0,
+          "sourceFact": "USA goals=100, Australia goals=53",
+          "explanation": "Subtract Australia's goals from USA's goals: 100 − 53 = 47."
+        },
+        {
+          "id": "q2",
+          "subject": "math",
+          "skill": "average",
+          "difficulty": "warm-up",
+          "prompt": "The USA scored 100 goals, China scored 88 goals, and Japan scored 58 goals. What is the average number of goals these three teams scored?",
+          "type": "numeric",
+          "answer": 82,
+          "tolerance": 0,
+          "sourceFact": "USA goals=100, China goals=88, Japan goals=58",
+          "explanation": "Add all three totals: 100 + 88 + 58 = 246. Then divide by 3: 246 ÷ 3 = 82."
+        },
+        {
+          "id": "q3",
+          "subject": "math",
+          "skill": "percentage",
+          "difficulty": "challenge",
+          "prompt": "France won 16 matches, drew 26, and lost 22. What percentage of their matches did France win? (Hint: wins ÷ total matches × 100)",
+          "type": "numeric",
+          "answer": 25,
+          "tolerance": 0,
+          "sourceFact": "France wins=16, draws=26, losses=22",
+          "explanation": "Total matches = 16 + 26 + 22 = 64. Percentage won = 16 ÷ 64 × 100 = 25%."
+        },
+        {
+          "id": "q4",
+          "subject": "geography",
+          "skill": "continent",
+          "difficulty": "warm-up",
+          "prompt": "Which continent is Japan on?",
+          "type": "multiple-choice",
+          "answer": "Asia",
+          "options": [
+            "Asia",
+            "Europe",
+            "North America",
+            "Oceania"
+          ],
+          "sourceFact": "Japan continent=Asia",
+          "explanation": "Japan is an island country located in East Asia."
+        },
+        {
+          "id": "q5",
+          "subject": "geography",
+          "skill": "capital",
+          "difficulty": "warm-up",
+          "prompt": "What is the capital city of France?",
+          "type": "multiple-choice",
+          "answer": "Paris",
+          "options": [
+            "Paris",
+            "Lyon",
+            "London",
+            "Madrid"
+          ],
+          "sourceFact": "France capital=Paris",
+          "explanation": "Paris is the capital of France."
+        },
+        {
+          "id": "q6",
+          "subject": "geography",
+          "skill": "capital",
+          "difficulty": "challenge",
+          "prompt": "Many people think Sydney is Australia's capital — but it isn't! What is Australia's real capital city?",
+          "type": "multiple-choice",
+          "answer": "Canberra",
+          "options": [
+            "Sydney",
+            "Melbourne",
+            "Canberra",
+            "Brisbane"
+          ],
+          "sourceFact": "Australia capital=Canberra",
+          "explanation": "Australia's capital is Canberra. It was chosen as a compromise between Sydney and Melbourne."
+        }
+      ],
+      "check": {
+        "ok": true
+      }
+    }
+  ]
+}

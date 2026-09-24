@@ -1,0 +1,102 @@
+{
+  "ok": true,
+  "escalated": false,
+  "tries": 1,
+  "trail": [
+    {
+      "attempt": 1,
+      "questions": [
+        {
+          "id": "q1",
+          "subject": "math",
+          "skill": "subtraction",
+          "difficulty": "warm-up",
+          "prompt": "At the Summer Olympics, USA scored 100 goals. Australia scored 53 goals. How many more goals did USA score than Australia?",
+          "type": "numeric",
+          "answer": 47,
+          "tolerance": 0,
+          "sourceFact": "teamStats: USA goals=100, Australia goals=53",
+          "explanation": "Subtract Australia's goals from USA's goals: 100 − 53 = 47."
+        },
+        {
+          "id": "q2",
+          "subject": "math",
+          "skill": "addition",
+          "difficulty": "warm-up",
+          "prompt": "France had 16 wins and 26 draws at the Summer Olympics. How many wins and draws did France have altogether?",
+          "type": "numeric",
+          "answer": 42,
+          "tolerance": 0,
+          "sourceFact": "teamStats: France wins=16, draws=26",
+          "explanation": "Add the wins and draws: 16 + 26 = 42."
+        },
+        {
+          "id": "q3",
+          "subject": "math",
+          "skill": "average",
+          "difficulty": "challenge",
+          "prompt": "At the Summer Olympics, USA scored 100 goals and Japan scored 58 goals. What is the average number of goals these two teams scored? Hint: add the goals together, then divide by 2.",
+          "type": "numeric",
+          "answer": 79,
+          "tolerance": 0,
+          "sourceFact": "teamStats: USA goals=100, Japan goals=58",
+          "explanation": "Add the goals: 100 + 58 = 158. Then divide by 2 (the number of teams): 158 ÷ 2 = 79."
+        },
+        {
+          "id": "q4",
+          "subject": "geography",
+          "skill": "capitals",
+          "difficulty": "warm-up",
+          "prompt": "What is the capital city of France?",
+          "type": "multiple-choice",
+          "answer": "Paris",
+          "options": [
+            "Paris",
+            "Lyon",
+            "Berlin",
+            "Madrid"
+          ],
+          "sourceFact": "countries: France capital=Paris",
+          "explanation": "The capital of France is Paris. It is one of the most visited cities in the world!"
+        },
+        {
+          "id": "q5",
+          "subject": "geography",
+          "skill": "continents",
+          "difficulty": "warm-up",
+          "prompt": "Australia competed in the Summer Olympics. Which continent is Australia in?",
+          "type": "multiple-choice",
+          "answer": "Oceania",
+          "options": [
+            "Oceania",
+            "Asia",
+            "Africa",
+            "Europe"
+          ],
+          "sourceFact": "countries: Australia continent=Oceania",
+          "explanation": "Australia is in Oceania. Oceania is the region that includes Australia and many islands in the Pacific Ocean."
+        },
+        {
+          "id": "q6",
+          "subject": "geography",
+          "skill": "capitals",
+          "difficulty": "challenge",
+          "prompt": "What is the capital city of Australia? Hint: it is not Sydney!",
+          "type": "multiple-choice",
+          "answer": "Canberra",
+          "options": [
+            "Canberra",
+            "Sydney",
+            "Melbourne",
+            "Brisbane"
+          ],
+          "sourceFact": "countries: Australia capital=Canberra",
+          "explanation": "The capital of Australia is Canberra. Many people think it is Sydney because Sydney is the biggest city, but Canberra is the true capital!"
+        }
+      ],
+      "check": {
+        "ok": true
+      }
+    }
+  ]
+}

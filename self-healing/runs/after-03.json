@@ -1,0 +1,102 @@
+{
+  "ok": true,
+  "escalated": false,
+  "tries": 1,
+  "trail": [
+    {
+      "attempt": 1,
+      "questions": [
+        {
+          "id": "math-1",
+          "subject": "math",
+          "skill": "subtraction",
+          "difficulty": "warm-up",
+          "prompt": "USA scored 100 goals and Japan scored 58 goals at the Olympics. How many more goals did USA score than Japan?",
+          "type": "numeric",
+          "answer": 42,
+          "tolerance": 0,
+          "sourceFact": "teamStats: USA goals=100, Japan goals=58",
+          "explanation": "Subtract Japan's goals from USA's goals: 100 − 58 = 42."
+        },
+        {
+          "id": "math-2",
+          "subject": "math",
+          "skill": "addition",
+          "difficulty": "warm-up",
+          "prompt": "China scored 88 goals and France scored 64 goals. How many goals did they score together?",
+          "type": "numeric",
+          "answer": 152,
+          "tolerance": 0,
+          "sourceFact": "teamStats: China goals=88, France goals=64",
+          "explanation": "Add the two totals: 88 + 64 = 152."
+        },
+        {
+          "id": "math-3",
+          "subject": "math",
+          "skill": "mean/average",
+          "difficulty": "challenge",
+          "prompt": "USA had 40 wins, China had 38 wins, and Japan had 27 wins. What was the average number of wins for these three teams?",
+          "type": "numeric",
+          "answer": 35,
+          "tolerance": 0,
+          "sourceFact": "teamStats: USA wins=40, China wins=38, Japan wins=27",
+          "explanation": "Add all the wins: 40 + 38 + 27 = 105. Then divide by 3 (the number of teams): 105 ÷ 3 = 35."
+        },
+        {
+          "id": "geo-1",
+          "subject": "geography",
+          "skill": "capitals",
+          "difficulty": "warm-up",
+          "prompt": "What is the capital city of France?",
+          "type": "multiple-choice",
+          "answer": "Paris",
+          "options": [
+            "Paris",
+            "London",
+            "Tokyo",
+            "Canberra"
+          ],
+          "sourceFact": "countries: France capital=Paris",
+          "explanation": "The capital of France is Paris."
+        },
+        {
+          "id": "geo-2",
+          "subject": "geography",
+          "skill": "continents",
+          "difficulty": "warm-up",
+          "prompt": "Australia competed in the Olympics. Which continent is Australia on?",
+          "type": "multiple-choice",
+          "answer": "Oceania",
+          "options": [
+            "Asia",
+            "Europe",
+            "North America",
+            "Oceania"
+          ],
+          "sourceFact": "countries: Australia continent=Oceania",
+          "explanation": "Australia is on the continent of Oceania, which also includes New Zealand and many Pacific islands."
+        },
+        {
+          "id": "geo-3",
+          "subject": "geography",
+          "skill": "languages",
+          "difficulty": "challenge",
+          "prompt": "Three of these Olympic countries speak English as their main language. Which country does NOT speak English?",
+          "type": "multiple-choice",
+          "answer": "France",
+          "options": [
+            "USA",
+            "Great Britain",
+            "Australia",
+            "France"
+          ],
+          "sourceFact": "countries: USA language=English, Great Britain language=English, Australia language=English, France language=French",
+          "explanation": "USA, Great Britain, and Australia all speak English. France speaks French — so France is the odd one out!"
+        }
+      ],
+      "check": {
+        "ok": true
+      }
+    }
+  ]
+}

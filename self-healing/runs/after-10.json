@@ -1,0 +1,107 @@
+{
+  "ok": true,
+  "escalated": false,
+  "tries": 1,
+  "trail": [
+    {
+      "attempt": 1,
+      "questions": [
+        {
+          "id": "q1",
+          "subject": "math",
+          "skill": "subtraction",
+          "difficulty": "warm-up",
+          "prompt": "The USA scored 100 goals and Japan scored 58 goals. How many more goals did the USA score than Japan?",
+          "type": "numeric",
+          "answer": 42,
+          "tolerance": 0,
+          "sourceFact": "USA goals (100), Japan goals (58)",
+          "explanation": "Subtract Japan's goals from the USA's goals: 100 − 58 = 42."
+        },
+        {
+          "id": "q2",
+          "subject": "math",
+          "skill": "addition",
+          "difficulty": "warm-up",
+          "prompt": "The USA won 40 matches and China won 38 matches. How many wins did the two teams have altogether?",
+          "type": "numeric",
+          "answer": 78,
+          "tolerance": 0,
+          "sourceFact": "USA wins (40), China wins (38)",
+          "explanation": "Add the two win totals together: 40 + 38 = 78."
+        },
+        {
+          "id": "q3",
+          "subject": "math",
+          "skill": "percentages",
+          "difficulty": "challenge",
+          "prompt": "France played 64 matches (wins + draws + losses combined). They won 16 of those matches. What percentage of their matches did France win?",
+          "type": "multiple-choice",
+          "answer": "25%",
+          "options": [
+            "15%",
+            "20%",
+            "25%",
+            "40%"
+          ],
+          "sourceFact": "France wins (16), France wins+draws+losses total (16+26+22=64)",
+          "explanation": "Divide wins by total matches, then multiply by 100: 16 ÷ 64 = 0.25, and 0.25 × 100 = 25%."
+        },
+        {
+          "id": "q4",
+          "subject": "geography",
+          "skill": "capitals",
+          "difficulty": "warm-up",
+          "prompt": "What is the capital city of Japan?",
+          "type": "multiple-choice",
+          "answer": "Tokyo",
+          "options": [
+            "Beijing",
+            "Paris",
+            "London",
+            "Tokyo"
+          ],
+          "sourceFact": "Japan capital (Tokyo)",
+          "explanation": "Tokyo is the capital city of Japan. Beijing is China's capital, Paris is France's, and London is Great Britain's."
+        },
+        {
+          "id": "q5",
+          "subject": "geography",
+          "skill": "continents",
+          "difficulty": "warm-up",
+          "prompt": "Which continent is Australia part of?",
+          "type": "multiple-choice",
+          "answer": "Oceania",
+          "options": [
+            "Asia",
+            "Europe",
+            "North America",
+            "Oceania"
+          ],
+          "sourceFact": "Australia continent (Oceania)",
+          "explanation": "Australia is in Oceania. Asia includes countries like China and Japan, Europe includes France and Great Britain, and North America includes the USA."
+        },
+        {
+          "id": "q6",
+          "subject": "geography",
+          "skill": "capitals",
+          "difficulty": "challenge",
+          "prompt": "What is the capital city of Australia? Careful — it is not the most famous city!",
+          "type": "multiple-choice",
+          "answer": "Canberra",
+          "options": [
+            "Sydney",
+            "Melbourne",
+            "Brisbane",
+            "Canberra"
+          ],
+          "sourceFact": "Australia capital (Canberra)",
+          "explanation": "Canberra is the capital of Australia. Sydney is the largest and most famous city, but Canberra was chosen as the capital instead."
+        }
+      ],
+      "check": {
+        "ok": true
+      }
+    }
+  ]
+}

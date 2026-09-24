@@ -1,0 +1,107 @@
+{
+  "ok": true,
+  "escalated": false,
+  "tries": 1,
+  "trail": [
+    {
+      "attempt": 1,
+      "questions": [
+        {
+          "id": "q1",
+          "subject": "math",
+          "skill": "subtraction",
+          "difficulty": "warm-up",
+          "prompt": "The USA scored 100 goals and Japan scored 58 goals at the Summer Olympics. How many more goals did the USA score than Japan?",
+          "type": "numeric",
+          "answer": 42,
+          "tolerance": 0,
+          "sourceFact": "teamStats[USA].goals=100, teamStats[Japan].goals=58",
+          "explanation": "Subtract Japan's goals from USA's goals: 100 − 58 = 42."
+        },
+        {
+          "id": "q2",
+          "subject": "math",
+          "skill": "average",
+          "difficulty": "warm-up",
+          "prompt": "China scored 88 goals and Japan scored 58 goals. What is the average number of goals these two teams scored?",
+          "type": "numeric",
+          "answer": 73,
+          "tolerance": 0,
+          "sourceFact": "teamStats[China].goals=88, teamStats[Japan].goals=58",
+          "explanation": "Add the two totals and divide by 2: (88 + 58) ÷ 2 = 146 ÷ 2 = 73."
+        },
+        {
+          "id": "q3",
+          "subject": "math",
+          "skill": "percentage",
+          "difficulty": "challenge",
+          "prompt": "France had 16 wins out of 64 total results at the Olympics. What percentage of their results were wins?",
+          "type": "multiple-choice",
+          "answer": "25%",
+          "options": [
+            "10%",
+            "25%",
+            "40%",
+            "50%"
+          ],
+          "sourceFact": "teamStats[France].wins=16, teamStats[France].goals=64 (wins+draws+losses)",
+          "explanation": "Divide wins by total results, then multiply by 100: 16 ÷ 64 = 0.25, and 0.25 × 100 = 25%."
+        },
+        {
+          "id": "q4",
+          "subject": "geography",
+          "skill": "language",
+          "difficulty": "warm-up",
+          "prompt": "Japan is one of the countries that competes in the Summer Olympics. What language do people in Japan speak?",
+          "type": "multiple-choice",
+          "answer": "Japanese",
+          "options": [
+            "English",
+            "Mandarin Chinese",
+            "French",
+            "Japanese"
+          ],
+          "sourceFact": "countries[Japan].language=Japanese",
+          "explanation": "People in Japan speak Japanese. Japan's capital city is Tokyo."
+        },
+        {
+          "id": "q5",
+          "subject": "geography",
+          "skill": "continent",
+          "difficulty": "warm-up",
+          "prompt": "France competed in the Summer Olympics. Which continent is France on?",
+          "type": "multiple-choice",
+          "answer": "Europe",
+          "options": [
+            "North America",
+            "Asia",
+            "Europe",
+            "Oceania"
+          ],
+          "sourceFact": "countries[France].continent=Europe",
+          "explanation": "France is on the continent of Europe. Its capital city is Paris."
+        },
+        {
+          "id": "q6",
+          "subject": "geography",
+          "skill": "capital",
+          "difficulty": "challenge",
+          "prompt": "Many people think Sydney is the capital of Australia — but that's a trick! What is the real capital of Australia?",
+          "type": "multiple-choice",
+          "answer": "Canberra",
+          "options": [
+            "Sydney",
+            "Melbourne",
+            "Perth",
+            "Canberra"
+          ],
+          "sourceFact": "countries[Australia].capital=Canberra",
+          "explanation": "Canberra is the capital of Australia, not Sydney. Sydney is the biggest city, but Canberra was specially chosen as the capital in 1908."
+        }
+      ],
+      "check": {
+        "ok": true
+      }
+    }
+  ]
+}

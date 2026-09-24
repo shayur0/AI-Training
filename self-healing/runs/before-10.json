@@ -1,0 +1,107 @@
+{
+  "ok": true,
+  "escalated": false,
+  "tries": 1,
+  "trail": [
+    {
+      "attempt": 1,
+      "questions": [
+        {
+          "id": "math-1",
+          "subject": "math",
+          "skill": "subtraction",
+          "difficulty": "warm-up",
+          "prompt": "The USA team scored 100 goals at the Summer Olympics. Australia scored 53 goals. How many more goals did the USA score than Australia?",
+          "type": "numeric",
+          "answer": 47,
+          "tolerance": 0,
+          "sourceFact": "teamStats: USA goals=100, Australia goals=53",
+          "explanation": "Subtract Australia's goals from the USA's goals: 100 − 53 = 47."
+        },
+        {
+          "id": "math-2",
+          "subject": "math",
+          "skill": "mean (average)",
+          "difficulty": "challenge",
+          "prompt": "China scored 88 goals and Japan scored 58 goals at the Olympics. What is the average number of goals these two teams scored?",
+          "type": "numeric",
+          "answer": 73,
+          "tolerance": 0,
+          "sourceFact": "teamStats: China goals=88, Japan goals=58",
+          "explanation": "Add the two totals: 88 + 58 = 146. Then divide by 2 because there are 2 teams: 146 ÷ 2 = 73."
+        },
+        {
+          "id": "math-3",
+          "subject": "math",
+          "skill": "percentage",
+          "difficulty": "challenge",
+          "prompt": "The USA had 100 results in all: 40 wins, 27 draws, and 33 losses. What percentage of their results were wins?",
+          "type": "multiple-choice",
+          "answer": "40%",
+          "options": [
+            "25%",
+            "27%",
+            "33%",
+            "40%"
+          ],
+          "sourceFact": "teamStats: USA wins=40, total results (wins+draws+losses)=100",
+          "explanation": "Divide wins by total results: 40 ÷ 100 = 0.40. Multiply by 100 to turn it into a percentage: 40%."
+        },
+        {
+          "id": "geo-1",
+          "subject": "geography",
+          "skill": "capitals",
+          "difficulty": "warm-up",
+          "prompt": "Japan sends athletes to the Summer Olympics every four years. What is the capital city of Japan?",
+          "type": "multiple-choice",
+          "answer": "Tokyo",
+          "options": [
+            "Beijing",
+            "Osaka",
+            "Seoul",
+            "Tokyo"
+          ],
+          "sourceFact": "countries: Japan capital=Tokyo",
+          "explanation": "The capital of Japan is Tokyo. Tokyo has even hosted the Summer Olympics!"
+        },
+        {
+          "id": "geo-2",
+          "subject": "geography",
+          "skill": "continents",
+          "difficulty": "warm-up",
+          "prompt": "France is one of the top Olympic teams. Which continent is France part of?",
+          "type": "multiple-choice",
+          "answer": "Europe",
+          "options": [
+            "Africa",
+            "Asia",
+            "Europe",
+            "North America"
+          ],
+          "sourceFact": "countries: France continent=Europe",
+          "explanation": "France is in Europe. Its capital is Paris, a famous city that has also hosted the Summer Olympics."
+        },
+        {
+          "id": "geo-3",
+          "subject": "geography",
+          "skill": "capitals",
+          "difficulty": "challenge",
+          "prompt": "Australia competes in every Summer Olympics. What is the capital city of Australia?",
+          "type": "multiple-choice",
+          "answer": "Canberra",
+          "options": [
+            "Brisbane",
+            "Canberra",
+            "Melbourne",
+            "Sydney"
+          ],
+          "sourceFact": "countries: Australia capital=Canberra",
+          "explanation": "Australia's capital is Canberra — not Sydney! Sydney is the biggest city, but Canberra was specially built to be the capital."
+        }
+      ],
+      "check": {
+        "ok": true
+      }
+    }
+  ]
+}

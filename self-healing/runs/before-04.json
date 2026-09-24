@@ -1,0 +1,198 @@
+{
+  "ok": true,
+  "escalated": false,
+  "tries": 2,
+  "trail": [
+    {
+      "attempt": 1,
+      "questions": [
+        {
+          "id": "math-1",
+          "subject": "math",
+          "skill": "subtraction",
+          "difficulty": "warm-up",
+          "prompt": "USA scored 100 goals and Japan scored 58 goals at the Summer Olympics. How many more goals did USA score than Japan?",
+          "type": "numeric",
+          "answer": 42,
+          "tolerance": 0,
+          "sourceFact": "teamStats: USA goals=100, Japan goals=58",
+          "explanation": "Subtract Japan's goals from USA's goals: 100 − 58 = 42."
+        },
+        {
+          "id": "math-2",
+          "subject": "math",
+          "skill": "finding averages",
+          "difficulty": "warm-up",
+          "prompt": "USA scored 100 goals and China scored 88 goals. What is the average number of goals scored by these two teams?",
+          "type": "numeric",
+          "answer": 94,
+          "tolerance": 0,
+          "sourceFact": "teamStats: USA goals=100, China goals=88",
+          "explanation": "Add both teams' goals together, then divide by 2: (100 + 88) ÷ 2 = 188 ÷ 2 = 94."
+        },
+        {
+          "id": "math-3",
+          "subject": "math",
+          "skill": "percentages",
+          "difficulty": "challenge",
+          "prompt": "France had 64 total results (wins, draws, and losses). 16 of those were wins. What percentage of France's results were wins?",
+          "type": "numeric",
+          "answer": 25,
+          "tolerance": 0,
+          "sourceFact": "teamStats: France wins=16, wins+draws+losses=64",
+          "explanation": "Divide wins by total results, then multiply by 100: 16 ÷ 64 = 0.25, and 0.25 × 100 = 25%."
+        },
+        {
+          "id": "geo-1",
+          "subject": "geography",
+          "skill": "capitals",
+          "difficulty": "warm-up",
+          "prompt": "What is the capital city of Japan?",
+          "type": "multiple-choice",
+          "answer": "Tokyo",
+          "options": [
+            "Beijing",
+            "Tokyo",
+            "Seoul",
+            "Osaka"
+          ],
+          "sourceFact": "countries: Japan capital=Tokyo",
+          "explanation": "Tokyo is the capital of Japan. Beijing is the capital of China, and Seoul is the capital of South Korea."
+        },
+        {
+          "id": "geo-2",
+          "subject": "geography",
+          "skill": "continents",
+          "difficulty": "warm-up",
+          "prompt": "Which continent is Australia on?",
+          "type": "multiple-choice",
+          "answer": "Oceania",
+          "options": [
+            "Asia",
+            "Europe",
+            "Africa",
+            "Oceania"
+          ],
+          "sourceFact": "countries: Australia continent=Oceania",
+          "explanation": "Australia is on the continent of Oceania. China and Japan are in Asia, while France and Great Britain are in Europe."
+        },
+        {
+          "id": "geo-3",
+          "subject": "geography",
+          "skill": "capitals",
+          "difficulty": "challenge",
+          "prompt": "Many people think Sydney is the capital of Australia — but it is not! What is the real capital of Australia?",
+          "type": "multiple-choice",
+          "answer": "Canberra",
+          "options": [
+            "Sydney",
+            "Melbourne",
+            "Canberra",
+            "Brisbane"
+          ],
+          "sourceFact": "countries: Australia capital=Canberra",
+          "explanation": "Canberra is the capital of Australia. Sydney is the biggest city, which is why many people mix them up, but Canberra is where the government is."
+        }
+      ],
+      "check": {
+        "ok": false,
+        "reason": "math-3: \"France had 64 total results (wins, draws, and losses). 16 of those were wins. What percentage of France's results were wins?\" claims a percent-of-games figure for France, but wins+draws+losses (64) doesn't reconcile with games (220) in the approved packet — asserts a false \"part of\" relationship"
+      }
+    },
+    {
+      "attempt": 2,
+      "questions": [
+        {
+          "id": "math-1",
+          "subject": "math",
+          "skill": "subtraction",
+          "difficulty": "warm-up",
+          "prompt": "USA scored 100 goals at the Olympics. Japan scored 58 goals. How many more goals did USA score than Japan?",
+          "type": "numeric",
+          "answer": 42,
+          "tolerance": 0,
+          "sourceFact": "teamStats: USA goals=100, Japan goals=58",
+          "explanation": "Subtract Japan's goals from USA's goals: 100 − 58 = 42."
+        },
+        {
+          "id": "math-2",
+          "subject": "math",
+          "skill": "addition",
+          "difficulty": "warm-up",
+          "prompt": "Great Britain won 22 games and France won 16 games. How many wins did these two teams score together?",
+          "type": "numeric",
+          "answer": 38,
+          "tolerance": 0,
+          "sourceFact": "teamStats: Great Britain wins=22, France wins=16",
+          "explanation": "Add the two win totals together: 22 + 16 = 38."
+        },
+        {
+          "id": "math-3",
+          "subject": "math",
+          "skill": "mean/average",
+          "difficulty": "challenge",
+          "prompt": "USA scored 100 goals, China scored 88 goals, and Japan scored 58 goals. What is the average number of goals scored by these three teams?",
+          "type": "numeric",
+          "answer": 82,
+          "tolerance": 0,
+          "sourceFact": "teamStats: USA goals=100, China goals=88, Japan goals=58",
+          "explanation": "Add all three totals: 100 + 88 + 58 = 246. Then divide by 3 teams: 246 ÷ 3 = 82."
+        },
+        {
+          "id": "geo-1",
+          "subject": "geography",
+          "skill": "capitals",
+          "difficulty": "warm-up",
+          "prompt": "What is the capital city of Australia?",
+          "type": "multiple-choice",
+          "answer": "Canberra",
+          "options": [
+            "Sydney",
+            "Melbourne",
+            "Canberra",
+            "Brisbane"
+          ],
+          "sourceFact": "countries: Australia capital=Canberra",
+          "explanation": "Australia's capital is Canberra. Sydney is the biggest city, but Canberra is where the government is."
+        },
+        {
+          "id": "geo-2",
+          "subject": "geography",
+          "skill": "continents",
+          "difficulty": "warm-up",
+          "prompt": "Which continent is Japan in?",
+          "type": "multiple-choice",
+          "answer": "Asia",
+          "options": [
+            "Europe",
+            "Asia",
+            "Oceania",
+            "North America"
+          ],
+          "sourceFact": "countries: Japan continent=Asia",
+          "explanation": "Japan is an island country in Asia."
+        },
+        {
+          "id": "geo-3",
+          "subject": "geography",
+          "skill": "languages",
+          "difficulty": "challenge",
+          "prompt": "Which of these Olympic teams comes from a country where French is the main language?",
+          "type": "multiple-choice",
+          "answer": "France",
+          "options": [
+            "Great Britain",
+            "Australia",
+            "France",
+            "USA"
+          ],
+          "sourceFact": "countries: France language=French; Great Britain, Australia, USA language=English",
+          "explanation": "France speaks French. Great Britain, Australia, and the USA all mainly speak English."
+        }
+      ],
+      "check": {
+        "ok": true
+      }
+    }
+  ]
+}

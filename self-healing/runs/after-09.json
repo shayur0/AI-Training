@@ -1,0 +1,102 @@
+{
+  "ok": true,
+  "escalated": false,
+  "tries": 1,
+  "trail": [
+    {
+      "attempt": 1,
+      "questions": [
+        {
+          "id": "q1",
+          "subject": "math",
+          "skill": "subtraction",
+          "difficulty": "warm-up",
+          "prompt": "The USA scored 100 goals and Australia scored 53 goals. How many more goals did the USA score than Australia?",
+          "type": "numeric",
+          "answer": 47,
+          "tolerance": 0,
+          "sourceFact": "teamStats: USA goals=100, Australia goals=53",
+          "explanation": "Subtract Australia's goals from USA's goals: 100 − 53 = 47."
+        },
+        {
+          "id": "q2",
+          "subject": "math",
+          "skill": "addition",
+          "difficulty": "warm-up",
+          "prompt": "China had 38 wins and 32 draws. How many wins and draws did China have altogether?",
+          "type": "numeric",
+          "answer": 70,
+          "tolerance": 0,
+          "sourceFact": "teamStats: China wins=38, draws=32",
+          "explanation": "Add China's wins and draws together: 38 + 32 = 70."
+        },
+        {
+          "id": "q3",
+          "subject": "math",
+          "skill": "percentage",
+          "difficulty": "challenge",
+          "prompt": "Japan had 27 wins, 14 draws, and 17 losses. What percentage of Japan's results were wins? Round to the nearest whole number.",
+          "type": "numeric",
+          "answer": 47,
+          "tolerance": 1,
+          "sourceFact": "teamStats: Japan wins=27, draws=14, losses=17 (total=58)",
+          "explanation": "Add all results: 27 + 14 + 17 = 58. Divide wins by total, then multiply by 100: 27 ÷ 58 × 100 ≈ 47%."
+        },
+        {
+          "id": "q4",
+          "subject": "geography",
+          "skill": "capitals",
+          "difficulty": "warm-up",
+          "prompt": "What is the capital city of France?",
+          "type": "multiple-choice",
+          "answer": "Paris",
+          "options": [
+            "Paris",
+            "London",
+            "Tokyo",
+            "Canberra"
+          ],
+          "sourceFact": "countries: France capital=Paris",
+          "explanation": "The capital of France is Paris. Paris even hosted the Summer Olympics!"
+        },
+        {
+          "id": "q5",
+          "subject": "geography",
+          "skill": "continents",
+          "difficulty": "warm-up",
+          "prompt": "Which continent is Japan on?",
+          "type": "multiple-choice",
+          "answer": "Asia",
+          "options": [
+            "Asia",
+            "Europe",
+            "Oceania",
+            "North America"
+          ],
+          "sourceFact": "countries: Japan continent=Asia",
+          "explanation": "Japan is a chain of islands in Asia. Its capital city is Tokyo."
+        },
+        {
+          "id": "q6",
+          "subject": "geography",
+          "skill": "capitals",
+          "difficulty": "challenge",
+          "prompt": "What is the capital city of Australia?",
+          "type": "multiple-choice",
+          "answer": "Canberra",
+          "options": [
+            "Sydney",
+            "Canberra",
+            "Melbourne",
+            "Brisbane"
+          ],
+          "sourceFact": "countries: Australia capital=Canberra",
+          "explanation": "Canberra is Australia's capital — not Sydney! Sydney is the biggest city, but Canberra was specially built to be the capital."
+        }
+      ],
+      "check": {
+        "ok": true
+      }
+    }
+  ]
+}

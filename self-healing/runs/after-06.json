@@ -1,0 +1,102 @@
+{
+  "ok": true,
+  "escalated": false,
+  "tries": 1,
+  "trail": [
+    {
+      "attempt": 1,
+      "questions": [
+        {
+          "id": "math-1",
+          "subject": "math",
+          "skill": "subtraction",
+          "difficulty": "warm-up",
+          "prompt": "USA scored 100 goals and Japan scored 58 goals. How many more goals did USA score than Japan?",
+          "type": "numeric",
+          "answer": 42,
+          "tolerance": 0,
+          "sourceFact": "USA goals=100, Japan goals=58",
+          "explanation": "Subtract Japan's goals from USA's goals: 100 − 58 = 42."
+        },
+        {
+          "id": "math-2",
+          "subject": "math",
+          "skill": "mean",
+          "difficulty": "challenge",
+          "prompt": "USA scored 100 goals, China scored 88 goals, and Japan scored 58 goals. What is the average number of goals for these three teams?",
+          "type": "numeric",
+          "answer": 82,
+          "tolerance": 0,
+          "sourceFact": "USA goals=100, China goals=88, Japan goals=58",
+          "explanation": "Add the three totals: 100 + 88 + 58 = 246. Then divide by 3: 246 ÷ 3 = 82."
+        },
+        {
+          "id": "math-3",
+          "subject": "math",
+          "skill": "percentage",
+          "difficulty": "challenge",
+          "prompt": "USA played 100 competitions and won 40 of them. What percentage of their competitions did USA win?",
+          "type": "numeric",
+          "answer": 40,
+          "tolerance": 0,
+          "sourceFact": "USA wins=40, USA goals(wins+draws+losses)=100",
+          "explanation": "Divide wins by total competitions, then multiply by 100: 40 ÷ 100 × 100 = 40%."
+        },
+        {
+          "id": "geo-1",
+          "subject": "geography",
+          "skill": "capitals",
+          "difficulty": "warm-up",
+          "prompt": "What is the capital city of Japan?",
+          "type": "multiple-choice",
+          "answer": "Tokyo",
+          "options": [
+            "Seoul",
+            "Tokyo",
+            "Beijing",
+            "Bangkok"
+          ],
+          "sourceFact": "Japan capital=Tokyo",
+          "explanation": "Tokyo is the capital of Japan. Beijing is the capital of China, not Japan."
+        },
+        {
+          "id": "geo-2",
+          "subject": "geography",
+          "skill": "continents",
+          "difficulty": "warm-up",
+          "prompt": "Australia is one of the countries in the Summer Olympics. Which continent is Australia on?",
+          "type": "multiple-choice",
+          "answer": "Oceania",
+          "options": [
+            "Asia",
+            "Africa",
+            "Europe",
+            "Oceania"
+          ],
+          "sourceFact": "Australia continent=Oceania",
+          "explanation": "Australia is on the continent of Oceania. It is not part of Asia or Europe."
+        },
+        {
+          "id": "geo-3",
+          "subject": "geography",
+          "skill": "languages",
+          "difficulty": "challenge",
+          "prompt": "France is competing in the Summer Olympics. What language do people mainly speak in France?",
+          "type": "multiple-choice",
+          "answer": "French",
+          "options": [
+            "Spanish",
+            "German",
+            "French",
+            "Italian"
+          ],
+          "sourceFact": "France language=French",
+          "explanation": "People in France mainly speak French. Spain speaks Spanish, Germany speaks German, and Italy speaks Italian."
+        }
+      ],
+      "check": {
+        "ok": true
+      }
+    }
+  ]
+}

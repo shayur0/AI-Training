@@ -1,0 +1,102 @@
+{
+  "ok": true,
+  "escalated": false,
+  "tries": 1,
+  "trail": [
+    {
+      "attempt": 1,
+      "questions": [
+        {
+          "id": "q1",
+          "subject": "math",
+          "skill": "averages",
+          "difficulty": "warm-up",
+          "prompt": "The USA scored 100 goals and Japan scored 58 goals at the Summer Olympics. What is the average number of goals scored by these two teams?",
+          "type": "numeric",
+          "answer": 79,
+          "tolerance": 0,
+          "sourceFact": "USA goals=100, Japan goals=58",
+          "explanation": "Add both teams' goals: 100 + 58 = 158. Then divide by 2 because there are 2 teams: 158 ÷ 2 = 79."
+        },
+        {
+          "id": "q2",
+          "subject": "math",
+          "skill": "differences",
+          "difficulty": "warm-up",
+          "prompt": "China scored 88 goals and Australia scored 53 goals. How many more goals did China score than Australia?",
+          "type": "numeric",
+          "answer": 35,
+          "tolerance": 0,
+          "sourceFact": "China goals=88, Australia goals=53",
+          "explanation": "Subtract Australia's goals from China's goals: 88 − 53 = 35."
+        },
+        {
+          "id": "q3",
+          "subject": "math",
+          "skill": "percentages",
+          "difficulty": "challenge",
+          "prompt": "The USA had 100 results in total (wins, draws, and losses added together). They won 40 of those. What percentage of their results were wins?",
+          "type": "numeric",
+          "answer": 40,
+          "tolerance": 1,
+          "sourceFact": "USA wins=40, USA wins+draws+losses=40+27+33=100",
+          "explanation": "Divide wins by total results, then multiply by 100: 40 ÷ 100 × 100 = 40%."
+        },
+        {
+          "id": "q4",
+          "subject": "geography",
+          "skill": "continents",
+          "difficulty": "warm-up",
+          "prompt": "Which continent is Australia part of?",
+          "type": "multiple-choice",
+          "answer": "Oceania",
+          "options": [
+            "Asia",
+            "Europe",
+            "North America",
+            "Oceania"
+          ],
+          "sourceFact": "Australia continent=Oceania",
+          "explanation": "Australia belongs to a region called Oceania. It is not part of Asia, Europe, or North America."
+        },
+        {
+          "id": "q5",
+          "subject": "geography",
+          "skill": "capitals",
+          "difficulty": "warm-up",
+          "prompt": "What is the capital city of Japan?",
+          "type": "multiple-choice",
+          "answer": "Tokyo",
+          "options": [
+            "Osaka",
+            "Beijing",
+            "Seoul",
+            "Tokyo"
+          ],
+          "sourceFact": "Japan capital=Tokyo",
+          "explanation": "Tokyo is Japan's capital city. Beijing is China's capital — they are different countries and different cities!"
+        },
+        {
+          "id": "q6",
+          "subject": "geography",
+          "skill": "capitals",
+          "difficulty": "challenge",
+          "prompt": "Many people think Sydney is the capital of Australia, but it isn't! What is Australia's real capital city?",
+          "type": "multiple-choice",
+          "answer": "Canberra",
+          "options": [
+            "Sydney",
+            "Melbourne",
+            "Brisbane",
+            "Canberra"
+          ],
+          "sourceFact": "Australia capital=Canberra",
+          "explanation": "Australia's capital is Canberra, not Sydney. Sydney is the biggest city, but Canberra was built specially to be the capital."
+        }
+      ],
+      "check": {
+        "ok": true
+      }
+    }
+  ]
+}

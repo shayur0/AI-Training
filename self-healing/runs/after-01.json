@@ -1,0 +1,102 @@
+{
+  "ok": true,
+  "escalated": false,
+  "tries": 1,
+  "trail": [
+    {
+      "attempt": 1,
+      "questions": [
+        {
+          "id": "math-1",
+          "subject": "math",
+          "skill": "subtraction",
+          "difficulty": "warm-up",
+          "prompt": "At the Summer Olympics, USA scored 100 goals and Japan scored 58 goals. How many more goals did USA score than Japan?",
+          "type": "numeric",
+          "answer": 42,
+          "tolerance": 0,
+          "sourceFact": "teamStats: USA goals=100, Japan goals=58",
+          "explanation": "Subtract Japan's goals from USA's goals: 100 − 58 = 42."
+        },
+        {
+          "id": "math-2",
+          "subject": "math",
+          "skill": "average",
+          "difficulty": "warm-up",
+          "prompt": "USA scored 100 goals and China scored 88 goals at the Summer Olympics. What is the average number of goals scored by these two teams?",
+          "type": "numeric",
+          "answer": 94,
+          "tolerance": 0,
+          "sourceFact": "teamStats: USA goals=100, China goals=88",
+          "explanation": "Add both totals, then divide by 2: (100 + 88) ÷ 2 = 188 ÷ 2 = 94."
+        },
+        {
+          "id": "math-3",
+          "subject": "math",
+          "skill": "percentage",
+          "difficulty": "challenge",
+          "prompt": "France played 64 matches at the Summer Olympics: 16 wins, 26 draws, and 22 losses. What percentage of France's matches did they win?",
+          "type": "numeric",
+          "answer": 25,
+          "tolerance": 0,
+          "sourceFact": "teamStats: France wins=16, draws=26, losses=22 (total=64)",
+          "explanation": "Divide wins by total matches, then multiply by 100: 16 ÷ 64 = 0.25, and 0.25 × 100 = 25%."
+        },
+        {
+          "id": "geo-1",
+          "subject": "geography",
+          "skill": "continent",
+          "difficulty": "warm-up",
+          "prompt": "Which continent is Japan on?",
+          "type": "multiple-choice",
+          "answer": "Asia",
+          "options": [
+            "Asia",
+            "Europe",
+            "North America",
+            "Oceania"
+          ],
+          "sourceFact": "countries: Japan, continent=Asia",
+          "explanation": "Japan is an island country in East Asia."
+        },
+        {
+          "id": "geo-2",
+          "subject": "geography",
+          "skill": "capital",
+          "difficulty": "warm-up",
+          "prompt": "What is the capital city of Australia?",
+          "type": "multiple-choice",
+          "answer": "Canberra",
+          "options": [
+            "Sydney",
+            "Canberra",
+            "Melbourne",
+            "Brisbane"
+          ],
+          "sourceFact": "countries: Australia, capital=Canberra",
+          "explanation": "Australia's capital is Canberra. Many people guess Sydney because it is the biggest city, but Canberra is the capital."
+        },
+        {
+          "id": "geo-3",
+          "subject": "geography",
+          "skill": "language",
+          "difficulty": "challenge",
+          "prompt": "Which country's main language is Mandarin Chinese?",
+          "type": "multiple-choice",
+          "answer": "China",
+          "options": [
+            "Japan",
+            "China",
+            "France",
+            "Great Britain"
+          ],
+          "sourceFact": "countries: China, language=Mandarin Chinese",
+          "explanation": "The main language spoken in China is Mandarin Chinese. Japan speaks Japanese, France speaks French, and Great Britain speaks English."
+        }
+      ],
+      "check": {
+        "ok": true
+      }
+    }
+  ]
+}

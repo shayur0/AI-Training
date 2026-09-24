@@ -1,0 +1,107 @@
+{
+  "ok": true,
+  "escalated": false,
+  "tries": 1,
+  "trail": [
+    {
+      "attempt": 1,
+      "questions": [
+        {
+          "id": "q1",
+          "subject": "math",
+          "skill": "subtraction",
+          "difficulty": "warm-up",
+          "prompt": "France scored 64 goals and Australia scored 53 goals. How many more goals did France score than Australia?",
+          "type": "numeric",
+          "answer": 11,
+          "tolerance": 0,
+          "sourceFact": "France goals=64, Australia goals=53",
+          "explanation": "Subtract Australia's goals from France's: 64 − 53 = 11."
+        },
+        {
+          "id": "q2",
+          "subject": "math",
+          "skill": "comparison",
+          "difficulty": "warm-up",
+          "prompt": "Which team won the most matches at the Summer Olympics?",
+          "type": "multiple-choice",
+          "answer": "USA",
+          "options": [
+            "USA",
+            "China",
+            "Japan",
+            "Great Britain"
+          ],
+          "sourceFact": "USA wins=40, China wins=38, Japan wins=27, Great Britain wins=22",
+          "explanation": "USA had 40 wins, China had 38, Japan had 27, and Great Britain had 22. The biggest number is 40, so USA won the most matches."
+        },
+        {
+          "id": "q3",
+          "subject": "math",
+          "skill": "average",
+          "difficulty": "challenge",
+          "prompt": "China scored 88 goals and Japan scored 58 goals. What is the average number of goals these two teams scored?",
+          "type": "numeric",
+          "answer": 73,
+          "tolerance": 0,
+          "sourceFact": "China goals=88, Japan goals=58",
+          "explanation": "Add the two teams' goals: 88 + 58 = 146. Then divide by 2 because there are 2 teams: 146 ÷ 2 = 73."
+        },
+        {
+          "id": "q4",
+          "subject": "geography",
+          "skill": "continents",
+          "difficulty": "warm-up",
+          "prompt": "Japan is a country in which continent?",
+          "type": "multiple-choice",
+          "answer": "Asia",
+          "options": [
+            "North America",
+            "Europe",
+            "Asia",
+            "Oceania"
+          ],
+          "sourceFact": "Japan continent=Asia",
+          "explanation": "Japan is an island country located in Asia."
+        },
+        {
+          "id": "q5",
+          "subject": "geography",
+          "skill": "capitals",
+          "difficulty": "warm-up",
+          "prompt": "What is the capital city of France?",
+          "type": "multiple-choice",
+          "answer": "Paris",
+          "options": [
+            "London",
+            "Paris",
+            "Berlin",
+            "Madrid"
+          ],
+          "sourceFact": "France capital=Paris",
+          "explanation": "The capital city of France is Paris."
+        },
+        {
+          "id": "q6",
+          "subject": "geography",
+          "skill": "capitals",
+          "difficulty": "challenge",
+          "prompt": "What is the capital city of Australia? Hint: it is not Sydney!",
+          "type": "multiple-choice",
+          "answer": "Canberra",
+          "options": [
+            "Sydney",
+            "Melbourne",
+            "Canberra",
+            "Brisbane"
+          ],
+          "sourceFact": "Australia capital=Canberra",
+          "explanation": "Many people think Australia's capital is Sydney, but the real capital is Canberra."
+        }
+      ],
+      "check": {
+        "ok": true
+      }
+    }
+  ]
+}

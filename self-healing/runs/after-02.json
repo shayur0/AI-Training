@@ -1,0 +1,102 @@
+{
+  "ok": true,
+  "escalated": false,
+  "tries": 1,
+  "trail": [
+    {
+      "attempt": 1,
+      "questions": [
+        {
+          "id": "math-1",
+          "subject": "math",
+          "skill": "subtraction",
+          "difficulty": "warm-up",
+          "prompt": "At the Summer Olympics, USA scored 100 goals and Japan scored 58 goals. How many more goals did USA score than Japan?",
+          "type": "numeric",
+          "answer": 42,
+          "tolerance": 0,
+          "sourceFact": "teamStats: USA goals=100, Japan goals=58",
+          "explanation": "Subtract Japan's goals from USA's goals: 100 − 58 = 42."
+        },
+        {
+          "id": "math-2",
+          "subject": "math",
+          "skill": "addition",
+          "difficulty": "warm-up",
+          "prompt": "Australia scored 53 goals and France scored 64 goals at the Summer Olympics. How many goals did they score altogether?",
+          "type": "numeric",
+          "answer": 117,
+          "tolerance": 0,
+          "sourceFact": "teamStats: Australia goals=53, France goals=64",
+          "explanation": "Add the two totals together: 53 + 64 = 117."
+        },
+        {
+          "id": "math-3",
+          "subject": "math",
+          "skill": "mean/average",
+          "difficulty": "challenge",
+          "prompt": "USA scored 100 goals, China scored 88 goals, and Japan scored 58 goals at the Summer Olympics. What is the average number of goals scored by these three teams?",
+          "type": "numeric",
+          "answer": 82,
+          "tolerance": 0,
+          "sourceFact": "teamStats: USA goals=100, China goals=88, Japan goals=58",
+          "explanation": "Add all three totals: 100 + 88 + 58 = 246. Then divide by 3 (the number of teams): 246 ÷ 3 = 82."
+        },
+        {
+          "id": "geo-1",
+          "subject": "geography",
+          "skill": "capitals",
+          "difficulty": "warm-up",
+          "prompt": "What is the capital city of Australia?",
+          "type": "multiple-choice",
+          "answer": "Canberra",
+          "options": [
+            "Sydney",
+            "Melbourne",
+            "Canberra",
+            "Perth"
+          ],
+          "sourceFact": "countries: Australia capital=Canberra",
+          "explanation": "Australia's capital is Canberra. A lot of people guess Sydney, but Canberra was specially built to be the capital city."
+        },
+        {
+          "id": "geo-2",
+          "subject": "geography",
+          "skill": "continents",
+          "difficulty": "warm-up",
+          "prompt": "Which continent is Japan in?",
+          "type": "multiple-choice",
+          "answer": "Asia",
+          "options": [
+            "Africa",
+            "Europe",
+            "Asia",
+            "Oceania"
+          ],
+          "sourceFact": "countries: Japan continent=Asia",
+          "explanation": "Japan is in Asia. It is a group of islands in the Pacific Ocean, just off the eastern coast of the Asian continent."
+        },
+        {
+          "id": "geo-3",
+          "subject": "geography",
+          "skill": "languages",
+          "difficulty": "challenge",
+          "prompt": "What is the main language spoken in China?",
+          "type": "multiple-choice",
+          "answer": "Mandarin Chinese",
+          "options": [
+            "Japanese",
+            "Korean",
+            "French",
+            "Mandarin Chinese"
+          ],
+          "sourceFact": "countries: China language=Mandarin Chinese",
+          "explanation": "The main language spoken in China is Mandarin Chinese. Japan speaks Japanese, and France speaks French."
+        }
+      ],
+      "check": {
+        "ok": true
+      }
+    }
+  ]
+}
