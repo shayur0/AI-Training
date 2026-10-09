@@ -104,3 +104,14 @@ export async function listConnectedDatabases() {
 export function goalsDatabaseId() {
   return NOTION_GOALS_DB_ID;
 }
+
+// Read a card back from Notion so assignment.md can state what Notion itself
+// reports, not just what this process believes it wrote.
+export async function readCard(id) {
+  const page = await notionRequest(`/pages/${id}`, "GET");
+  return {
+    url: page.url,
+    status: page.properties.Status?.select?.name,
+    lastEdited: page.last_edited_time,
+  };
+}

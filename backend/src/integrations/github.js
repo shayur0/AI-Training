@@ -65,3 +65,13 @@ export async function openPullRequest({ title, head, body, base = "main" }) {
   const pr = await ghRequest("/pulls", "POST", { title, head, base, body });
   return { number: pr.number, url: pr.html_url };
 }
+
+// Like getFile, but null when the file does not exist on that ref.
+export async function getFileOrNull(path, ref) {
+  try {
+    return await getFile(path, ref);
+  } catch (err) {
+    if (err.message.includes("-> 404")) return null;
+    throw err;
+  }
+}

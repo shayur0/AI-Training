@@ -1,6 +1,6 @@
 import { queryOpenTasks } from "./integrations/notion.js";
 
-const INTERVAL_MS = 60 * 1000;
+export const INTERVAL_MS = 60 * 1000;
 
 // "Is there anything new for me?" -- the loop that makes the agent check in
 // on its own instead of only reacting to a message or a webhook.

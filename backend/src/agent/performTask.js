@@ -1,4 +1,5 @@
-import { getFile, createBranch, putFile, openPullRequest } from "../integrations/github.js";
+import { getFile, getFileOrNull, createBranch, putFile, openPullRequest } from "../integrations/github.js";
+import { gatherFacts, renderAssignment } from "./assignmentDoc.js";
 import { editFile } from "./llm.js";
 
 const HOMEPAGE = "frontend/src/App.jsx";
@@ -39,9 +40,29 @@ export async function performTask(run, event) {
   });
   run.branch = branch;
 
+  // assignment.md goes in before the PR opens. The PR link and the Done
+  // timestamp don't exist yet, so the file says so; a final commit fills them in.
+  const existing = await getFileOrNull("assignment.md", branch);
+  const first = await putFile({
+    path: "assignment.md",
+    content: renderAssignment(await gatherFacts(run, event)),
+    branch,
+    message: "Add assignment.md describing this run",
+    sha: existing?.sha,
+  });
+
   run.pr = await openPullRequest({
     title: "Add footer to homepage",
     head: branch,
     body: `Opened automatically from a Slack task.\n\n> ${event.text}`,
+  });
+
+  await run.setStatus("Done");
+  await putFile({
+    path: "assignment.md",
+    content: renderAssignment(await gatherFacts(run, event)),
+    branch,
+    message: "Update assignment.md with PR link and final status",
+    sha: first.content.sha,
   });
 }

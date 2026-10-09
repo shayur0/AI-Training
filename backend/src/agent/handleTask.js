@@ -3,6 +3,12 @@ import { sendMessage, targetChannelId } from "../integrations/slack.js";
 
 const seenEvents = new Set();
 
+// Slack HTML-escapes &, < and > in message text; undo that so the card and
+// assignment.md show the task as it was typed.
+export function unescapeSlack(text) {
+  return text.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
+}
+
 // Only real, human-posted messages in the configured channel count as tasks.
 // Slack also delivers the bot's own posts and edits/joins as message events;
 // reacting to those would make the agent answer itself in a loop.
@@ -31,7 +37,7 @@ export function isDuplicate(eventId) {
 // for assignment.md's status history.
 export class Run {
   constructor(taskText) {
-    this.taskText = taskText;
+    this.taskText = unescapeSlack(taskText);
     this.history = [];
     this.failures = [];
     this.card = null;
@@ -48,6 +54,10 @@ export class Run {
     this.history.push({ status, at: new Date().toISOString() });
   }
 
+  currentStatus() {
+    return this.history.at(-1)?.status;
+  }
+
   // Failures are kept, not swallowed -- assignment.md reports them verbatim.
   recordFailure(step, err) {
     this.failures.push({ step, message: err.message, at: new Date().toISOString() });
@@ -60,7 +70,7 @@ export async function handleSlackTask(event, work) {
     await run.start();
     await run.setStatus("In Progress");
     await work(run, event);
-    await run.setStatus("Done");
+    if (run.currentStatus() !== "Done") await run.setStatus("Done");
   } catch (err) {
     run.recordFailure("run", err);
     console.error("task run failed:", err.message);

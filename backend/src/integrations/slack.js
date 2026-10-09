@@ -37,16 +37,17 @@ async function slackGet(method, params = {}) {
   return json;
 }
 
-// Real values for assignment.md: bot/app name, workspace, channel name.
-export async function getIdentity() {
+// Real values for assignment.md: bot/app name and workspace, then channel
+// name. Separate calls so one failing (e.g. a missing scope) doesn't hide
+// the other's values.
+export async function getBotInfo() {
   const auth = await slackGet("auth.test");
+  return { botName: auth.user, workspace: auth.team };
+}
+
+export async function getChannelInfo() {
   const channel = await slackGet("conversations.info", { channel: SLACK_CHANNEL_ID });
-  return {
-    botName: auth.user,
-    workspace: auth.team,
-    channelId: SLACK_CHANNEL_ID,
-    channelName: channel.channel.name,
-  };
+  return { channelId: SLACK_CHANNEL_ID, channelName: channel.channel.name };
 }
 
 export function targetChannelId() {
