@@ -1,6 +1,6 @@
 # Assignment: Module 15 integrations run
 
-Written automatically by the agent at 2026-10-09T14:55:56.847Z. Every value below was read from the live systems during this run; anything that could not be read says so.
+Written automatically by the agent at 2026-10-09T14:55:59.852Z. Every value below was read from the live systems during this run; anything that could not be read says so.
 
 ## Who and where
 
@@ -15,12 +15,13 @@ Written automatically by the agent at 2026-10-09T14:55:56.847Z. Every value belo
 - **Database used:** "Agent Tasks"
 - **Card title:** Slack task: Add a footer to this project's homepage with my name, the pr
 - **Card link:** https://app.notion.com/p/Slack-task-Add-a-footer-to-this-project-s-homepage-with-my-name-the-pr-3f4a9df1542881bb9a9de421a117f24f
-- **Notion's own read-back of the card:** status "In Progress", last edited 2026-10-09T14:55:00.000Z
+- **Notion's own read-back of the card:** status "Done", last edited 2026-10-09T14:55:00.000Z
 
 ### Status history (UTC, recorded as each change was made)
 
 1. To Do - 2026-10-09T14:55:48.926Z
 1. In Progress - 2026-10-09T14:55:49.140Z
+1. Done - 2026-10-09T14:55:59.743Z
 
 ## Task text as posted in Slack
 
@@ -32,7 +33,7 @@ Add a footer to this project's homepage with my name, the project name, and the 
 
 - **Check-in loop interval:** 60 seconds
 - **Branch:** slack-task/1791557754044
-- **Pull request:** Not opened yet when this version was written (a later commit on this branch adds the link).
+- **Pull request:** #1 - https://github.com/shayur0/AI-Training/pull/1
 
 ## What failed
 
