@@ -41,7 +41,9 @@ router.post("/events", (req, res) => {
   if (type === "event_callback") {
     // Acknowledge immediately; Slack expects a fast 200 and retries otherwise.
     res.status(200).end();
-    if (req.get("X-Slack-Retry-Num") || isDuplicate(req.body.event_id)) return;
+    // Dedupe on event_id only. Skipping every retry would drop the message when
+    // the host was asleep and the first delivery never reached this handler.
+    if (isDuplicate(req.body.event_id)) return;
     console.log(`slack event received: ${event?.type}`);
     if (isTaskMessage(event)) {
       handleSlackTask(event, performTask).catch((err) => console.error("task crashed:", err.message));
