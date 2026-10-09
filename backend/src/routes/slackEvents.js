@@ -1,5 +1,7 @@
 import { Router } from "express";
 import crypto from "node:crypto";
+import { isTaskMessage, isDuplicate, handleSlackTask } from "../agent/handleTask.js";
+import { performTask } from "../agent/performTask.js";
 
 const router = Router();
 const { SLACK_SIGNING_SECRET } = process.env;
@@ -37,10 +39,13 @@ router.post("/events", (req, res) => {
   }
 
   if (type === "event_callback") {
-    console.log(`slack event received: ${event?.type}`);
-    // Acknowledge immediately; Slack expects a fast 200 regardless of what
-    // the agent decides to do with the event.
+    // Acknowledge immediately; Slack expects a fast 200 and retries otherwise.
     res.status(200).end();
+    if (req.get("X-Slack-Retry-Num") || isDuplicate(req.body.event_id)) return;
+    console.log(`slack event received: ${event?.type}`);
+    if (isTaskMessage(event)) {
+      handleSlackTask(event, performTask).catch((err) => console.error("task crashed:", err.message));
+    }
     return;
   }
 

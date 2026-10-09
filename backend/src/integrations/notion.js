@@ -71,3 +71,36 @@ export async function queryOpenTasks() {
     status: page.properties.Status.select?.name,
   }));
 }
+
+// Create/move a card by page id, so a run can track one specific card even if
+// another card shares its title.
+export async function createCard(name, { status = "To Do", priority = "Medium", notes } = {}) {
+  assertConfigured();
+  const properties = buildProperties({ status, priority, notes });
+  properties.Name = { title: [{ text: { content: name } }] };
+  const page = await notionRequest("/pages", "POST", {
+    parent: { database_id: NOTION_GOALS_DB_ID },
+    properties,
+  });
+  return { id: page.id, url: page.url };
+}
+
+export async function updateCard(id, fields) {
+  return notionRequest(`/pages/${id}`, "PATCH", { properties: buildProperties(fields) });
+}
+
+// How many databases this integration can see (i.e. has under Connections).
+export async function listConnectedDatabases() {
+  assertConfigured();
+  const result = await notionRequest("/search", "POST", {
+    filter: { property: "object", value: "database" },
+  });
+  return result.results.map((db) => ({
+    id: db.id,
+    title: db.title.map((t) => t.plain_text).join("") || "(untitled)",
+  }));
+}
+
+export function goalsDatabaseId() {
+  return NOTION_GOALS_DB_ID;
+}

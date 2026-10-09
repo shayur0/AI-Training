@@ -25,3 +25,30 @@ export async function sendMessage(text) {
   }
   return json;
 }
+
+async function slackGet(method, params = {}) {
+  assertConfigured();
+  const qs = new URLSearchParams(params).toString();
+  const res = await fetch(`https://slack.com/api/${method}?${qs}`, {
+    headers: { Authorization: `Bearer ${SLACK_BOT_TOKEN}` },
+  });
+  const json = await res.json();
+  if (!json.ok) throw new Error(`Slack ${method} failed: ${json.error}`);
+  return json;
+}
+
+// Real values for assignment.md: bot/app name, workspace, channel name.
+export async function getIdentity() {
+  const auth = await slackGet("auth.test");
+  const channel = await slackGet("conversations.info", { channel: SLACK_CHANNEL_ID });
+  return {
+    botName: auth.user,
+    workspace: auth.team,
+    channelId: SLACK_CHANNEL_ID,
+    channelName: channel.channel.name,
+  };
+}
+
+export function targetChannelId() {
+  return SLACK_CHANNEL_ID;
+}
