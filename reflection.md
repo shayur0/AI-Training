@@ -37,6 +37,6 @@ This showed me the connection is working again.
 
 ## 5. What I'd do differently
 
-Next time I'd check the Render logs first, because Notion looked fine and the error only showed up in the logs. I'd also like to build a skill or agent that watches the logs and reports back to me if something is wrong, so I don't have to notice it myself.
+I'm thinking it would be good to build a skill or agent that watches the logs and reports back to me if something is wrong, so I don't have to notice it myself. I'd use things I learned in this course to do that.
 
 So all in all, job done well!
