@@ -55,6 +55,11 @@ function App() {
       {screen === "results" && (
         <Results grading={grading} onTryAgain={handleTryAgain} onFollowUp={handleFollowUp} />
       )}
+      <footer className="app-footer">
+        <p>Shayur</p>
+        <p>The Illumination Space</p>
+        <p>Built with Claude.</p>
+      </footer>
     </div>
   );
 }
